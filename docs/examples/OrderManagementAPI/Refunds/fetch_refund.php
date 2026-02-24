@@ -32,14 +32,6 @@ $sharedSecret = getenv('PASSWORD') ?: 'sharedSecret';
 $orderId = getenv('ORDER_ID') ?: '12345';
 $refundId = getenv('REFUND_ID') ?: '34567';
 
-/*
-EU_BASE_URL = 'https://api.klarna.com'
-EU_TEST_BASE_URL = 'https://api.playground.klarna.com'
-NA_BASE_URL = 'https://api-na.klarna.com'
-NA_TEST_BASE_URL = 'https://api-na.playground.klarna.com'
-OC_BASE_URL = 'https://api-oc.klarna.com'
-OC_TEST_BASE_URL = 'https://api-oc.playground.klarna.com'
-*/
 $apiEndpoint = Klarna\Rest\Transport\ConnectorInterface::EU_TEST_BASE_URL;
 
 $connector = Klarna\Rest\Transport\GuzzleConnector::create(
